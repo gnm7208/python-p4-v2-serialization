@@ -16,3 +16,4 @@ class Pet(db.Model, SerializerMixin):
 
     def __repr__(self):
         return f'<Pet {self.id}, {self.name}, {self.species}>'
+
