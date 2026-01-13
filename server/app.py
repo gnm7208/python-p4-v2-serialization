@@ -17,6 +17,7 @@ db.init_app(app)
 
 @app.route('/')
 def index():
+    """Welcome endpoint for the pet directory API."""
     body = {'message': 'Welcome to the pet directory!'}
     return make_response(body, 200)
 
