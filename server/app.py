@@ -23,6 +23,11 @@ def index():
 
 @app.route('/pets/<int:id>')
 def pet_by_id(id):
+    """Retrieve a pet by its ID.
+    
+    Returns a JSON response with the pet data if found,
+    or an error message if not found.
+    """
     pet = Pet.query.filter(Pet.id == id).first()
 
     if pet:
