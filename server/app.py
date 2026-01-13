@@ -41,6 +41,11 @@ def pet_by_id(id):
 
 @app.route('/species/<string:species>')
 def pet_by_species(species):
+    """Retrieve all pets of a given species.
+    
+    Returns a JSON response with the count and list of pets
+    matching the specified species.
+    """
     pets = []  # array to store a dictionary for each pet
     for pet in Pet.query.filter_by(species=species).all():
         pets.append(pet.to_dict())
